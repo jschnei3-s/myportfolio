@@ -7,9 +7,9 @@ export function Header() {
         <div className="flex items-center">
           <a 
             href="/" 
-            className="text-lg font-semibold tracking-tight transition-opacity hover:opacity-80 md:text-xl"
+            className="text-base font-medium tracking-tight transition-opacity hover:opacity-70 md:text-lg"
           >
-            Jonathan Schneider
+            Jonathan Schneider Portfolio
           </a>
         </div>
         <nav className="flex items-center gap-4">

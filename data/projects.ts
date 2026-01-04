@@ -2,6 +2,18 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    id: "rentelligence",
+    title: "RENTELLIGENCE",
+    description: "Machine learning rental pricing tool for short-term rentals using XGBoost model trained on 48,000+ Paris Airbnb listings with 60.7% R² accuracy.",
+    tags: ["Next.js", "Machine Learning", "XGBoost", "Python", "Analytics"],
+    links: {
+      live: "https://rentelligence.onrender.com",
+    },
+    featured: true,
+    image: "/images/rentelligence.jpeg",
+    category: "Analytics & Modeling",
+  },
+  {
     id: "ai-journal",
     title: "AI Journaling App",
     description: "An intelligent journaling application that helps users reflect and organize their thoughts with AI-powered insights.",

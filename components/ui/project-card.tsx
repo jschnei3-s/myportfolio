@@ -32,9 +32,9 @@ export function ProjectCard({
     >
       <div
         className={cn(
-          "relative overflow-hidden rounded-lg border border-border",
+          "relative overflow-hidden rounded-xl border border-border/50",
           "bg-background transition-all duration-300",
-          "hover:border-accent hover:shadow-lg",
+          "hover:border-foreground/30 hover:shadow-lg hover:shadow-foreground/5 hover:-translate-y-1",
           isLarge ? "h-full" : "h-full"
         )}
       >

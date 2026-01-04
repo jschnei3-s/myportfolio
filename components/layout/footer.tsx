@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Linkedin, Github, Mail, FileText } from "lucide-react";
+import { Linkedin, Github, Mail, FileText, Camera } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface FooterLinkProps {
@@ -61,7 +61,7 @@ export function Footer() {
             />
             <FooterLink
               href="https://jsphotography629.squarespace.com/"
-              icon={<FileText className="h-4 w-4" />}
+              icon={<Camera className="h-4 w-4" />}
               label="Photography"
               external
             />

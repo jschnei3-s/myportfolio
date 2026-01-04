@@ -24,16 +24,18 @@ const focusAreas = [
 
 export function FocusAreas() {
   return (
-    <section className="container mx-auto px-4 py-16 md:py-24">
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Focus Areas
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          What ties my work together
-        </p>
-      </div>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+    <section className="relative overflow-hidden border-b border-border/50">
+      <div className="absolute inset-0 bg-gradient-to-t from-muted/20 to-transparent" />
+      <div className="container relative mx-auto px-4 py-20 md:py-28">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+            Focus Areas
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
+            What ties my work together
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-6">
         {focusAreas.map((area, index) => (
           <motion.div
             key={area.title}
@@ -42,16 +44,18 @@ export function FocusAreas() {
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             className={cn(
-              "rounded-lg border border-border bg-background p-6",
-              "transition-all hover:border-accent hover:shadow-md"
+              "group relative rounded-xl border border-border/50 bg-background p-6",
+              "transition-all hover:border-foreground/30 hover:shadow-lg hover:shadow-foreground/5 hover:-translate-y-0.5",
+              "backdrop-blur-sm"
             )}
           >
-            <h3 className="text-lg font-semibold">{area.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <h3 className="text-lg font-semibold group-hover:text-foreground transition-colors">{area.title}</h3>
+            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
               {area.description}
             </p>
           </motion.div>
         ))}
+        </div>
       </div>
     </section>
   );
