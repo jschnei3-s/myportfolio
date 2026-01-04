@@ -1,0 +1,329 @@
+Product Requirements Document (PRD)
+Project: Personal Portfolio Website (Vercel-Hosted Project Showcase)
+
+Owner: Jonathan “Yoni” Schneider
+Primary Platform: Next.js (App Router)
+Hosting: Vercel
+Status: Final Draft v1.1
+Goal: High-signal, modern portfolio that showcases real, live products
+
+1. Product Vision
+
+Build a modern, premium portfolio website that showcases multiple production-deployed projects (all hosted on Vercel) in a way that:
+
+Immediately signals technical competence
+
+Feels closer to a product studio / builder portfolio than a resume site
+
+Allows recruiters and mentors to click directly into live, working apps
+
+The site should feel:
+
+intentional
+
+polished
+
+fast
+
+credible
+
+No fluff. No filler.
+
+2. Problem Statement
+
+I have built multiple real applications and analytical projects, each deployed publicly on Vercel:
+
+AI journaling products
+
+A task / productivity app
+
+A fixed income analytics / portfolio site
+
+However:
+
+These projects are scattered across URLs
+
+There is no narrative tying them together
+
+There is no single place that communicates why these projects matter or how I think
+
+This portfolio website solves that by acting as:
+
+A single, curated entry point into my work.
+
+3. Target Users
+Primary Users
+
+Recruiters (finance, consulting, analytics, product)
+
+Hiring managers
+
+Partners / senior professionals
+
+Secondary Users
+
+Mentors
+
+Teammates
+
+Other builders / students
+
+4. Core User Journey (Critical)
+
+Desired flow (≤ 30 seconds):
+
+Land on homepage
+
+Immediately see:
+
+who I am
+
+what I build
+
+my best projects
+
+Click a Live Demo (Vercel link)
+
+Understand value + scope in <1 minute
+
+Click resume / LinkedIn
+
+If this works, the product is successful.
+
+5. Scope (MVP)
+Pages
+
+Home (primary landing page)
+
+Projects (optional if >5 projects; otherwise sectioned home)
+
+About (short, optional)
+
+No blog, no CMS, no auth.
+
+6. Homepage Structure (MVP – Required)
+1. Hero Section
+
+Name
+
+1-line positioning statement (builder + finance + analytics)
+
+CTA buttons:
+
+View Projects
+
+Resume
+
+2. Featured Projects (Most important)
+
+Show 3 featured projects with large cards:
+
+Featured Projects (initial)
+
+AI Journaling App
+Live demo:
+https://ai-journal-i3hh.vercel.app/login
+
+Task / Productivity App
+Live demo:
+https://task-app-rosy-three.vercel.app/
+
+Fixed Income Portfolio / Analytics Site
+Live demo:
+https://fixed-income-portfolio-f3tc.vercel.app/
+
+Each featured card must include:
+
+Screenshot / thumbnail
+
+Project name
+
+1-sentence value proposition
+
+Tech stack tags
+
+Buttons:
+
+Live Demo
+
+GitHub (if public)
+
+Deck / write-up (if applicable)
+
+3. All Projects Grid
+
+Smaller cards for:
+
+Academic projects
+
+Analytics models
+
+Experiments
+
+Older work
+
+Consistent layout, no visual noise.
+
+4. Focus Areas / Capabilities
+
+Short section showing what ties projects together:
+
+Finance & Capital Markets
+
+Analytics & Modeling
+
+Product & Engineering
+
+Strategy & Systems Thinking
+
+This answers: “What lane is he in?”
+
+5. Footer
+
+LinkedIn
+
+GitHub
+
+Email
+
+Resume
+
+7. Project Card Requirements (Key Component)
+
+Each project must have:
+
+Required
+
+Title
+
+One-sentence description (problem → solution)
+
+Tech stack (3–6 tags)
+
+Live Demo link (Vercel)
+
+Visual (screenshot or OG image)
+
+Optional
+
+“Featured” badge
+
+Secondary links (GitHub, PDF, slides)
+
+8. Project Detail View (Modal or Page)
+
+When a project is clicked:
+
+Short overview
+
+What problem it solves
+
+What you built (features)
+
+Tech stack
+
+Outcome / learnings
+
+Links
+
+No long essays. Clear bullets.
+
+9. Design Requirements (Non-Negotiable)
+Visual Style
+
+Modern, premium, minimal
+
+Inspired by:
+
+Vercel
+
+Linear
+
+Stripe
+
+Large type
+
+Clean spacing
+
+Strong hierarchy
+
+Motion
+
+Subtle hover states
+
+Soft fade-ins
+
+No gimmicks
+
+Motion should support clarity, not distract
+
+Dark Mode
+
+Strongly preferred
+
+Default or toggle
+
+10. Functional Requirements
+FR-1: Project Data Model
+
+Projects stored in a single data file:
+
+title
+
+description
+
+tags
+
+links
+
+featured boolean
+
+image
+
+FR-2: External Links
+
+Live demos open in new tabs
+
+Must support multiple links per project
+
+FR-3: Performance
+
+Static generation
+
+Fast initial load
+
+Lighthouse score target: 90+
+
+11. Non-Functional Requirements
+
+Easy to update (add project in <5 minutes)
+
+No backend
+
+No authentication
+
+Vercel auto-deploy from GitHub
+
+12. Out of Scope (Explicit)
+
+Blog
+
+CMS
+
+Analytics dashboards
+
+Auth
+
+SEO optimization beyond basics
+
+13. Success Criteria
+
+The portfolio is successful if:
+
+A recruiter can open a live app within 20 seconds
+
+The site feels “real” and not academic
+
+Projects feel cohesive, not random
+
+The site elevates your resume rather than repeating it
