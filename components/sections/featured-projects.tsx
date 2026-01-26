@@ -1,8 +1,16 @@
+"use client";
+
+import { useState } from "react";
 import { getFeaturedProjects } from "@/lib/projects";
 import { ProjectCard } from "@/components/ui/project-card";
+import { CaseStudyModal } from "@/components/ui/case-study-modal";
+import { getCaseStudyByProjectId } from "@/lib/case-studies";
 
 export function FeaturedProjects() {
   const featuredProjects = getFeaturedProjects();
+  const [selectedCaseStudy, setSelectedCaseStudy] = useState<string | null>(null);
+  
+  const caseStudy = selectedCaseStudy ? getCaseStudyByProjectId(selectedCaseStudy) : null;
 
   return (
     <section id="projects" className="relative overflow-hidden border-b border-border/50 bg-muted/20">
@@ -22,10 +30,20 @@ export function FeaturedProjects() {
               key={project.id}
               project={project}
               variant="large"
+              onCaseStudyClick={setSelectedCaseStudy}
             />
           ))}
         </div>
       </div>
+      
+      {/* Case Study Modal */}
+      {caseStudy && (
+        <CaseStudyModal
+          caseStudy={caseStudy}
+          isOpen={!!selectedCaseStudy}
+          onClose={() => setSelectedCaseStudy(null)}
+        />
+      )}
     </section>
   );
 }

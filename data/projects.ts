@@ -2,6 +2,43 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    id: "consulting-case-simulator",
+    title: "Consulting Case Simulator",
+    description: "A realistic case interview partner that guides, evaluates, and teaches — anytime. Practice consulting case interviews with AI-powered feedback.",
+    tags: ["Next.js", "AI/ML", "TypeScript", "Vercel"],
+    links: {
+      live: "https://consulting-sim-uvup-32of1zors-yoni-schneiders-projects.vercel.app",
+    },
+    featured: true,
+    image: "/images/consulting-case-simulator.jpg",
+    category: "Product & Engineering",
+    hasCaseStudy: true,
+  },
+  {
+    id: "fixed-income-portfolio",
+    title: "Fixed Income Portfolio / Analytics Site",
+    description: "A comprehensive analytics platform for fixed income portfolio management and analysis.",
+    tags: ["Next.js", "Analytics", "Finance", "Data Visualization"],
+    links: {
+      live: "https://fixed-income-portfolio-f3tc.vercel.app/",
+    },
+    featured: true,
+    image: "/images/fixed-income-portfolio.png",
+    category: "Finance & Capital Markets",
+  },
+  {
+    id: "task-app",
+    title: "Task / Productivity App",
+    description: "A modern productivity application for managing tasks and staying organized with an intuitive interface.",
+    tags: ["Next.js", "React", "TypeScript", "Vercel"],
+    links: {
+      live: "https://task-app-rosy-three.vercel.app/",
+    },
+    featured: true,
+    image: "/images/task-app.png",
+    category: "Product & Engineering",
+  },
+  {
     id: "rentelligence",
     title: "RENTELLIGENCE",
     description: "Machine learning rental pricing tool for short-term rentals using XGBoost model trained on 48,000+ Paris Airbnb listings with 60.7% R² accuracy.",
@@ -24,30 +61,6 @@ export const projects: Project[] = [
     featured: true,
     image: "/images/ai-journal.png",
     category: "Product & Engineering",
-  },
-  {
-    id: "task-app",
-    title: "Task / Productivity App",
-    description: "A modern productivity application for managing tasks and staying organized with an intuitive interface.",
-    tags: ["Next.js", "React", "TypeScript", "Vercel"],
-    links: {
-      live: "https://task-app-rosy-three.vercel.app/",
-    },
-    featured: true,
-    image: "/images/task-app.png",
-    category: "Product & Engineering",
-  },
-  {
-    id: "fixed-income-portfolio",
-    title: "Fixed Income Portfolio / Analytics Site",
-    description: "A comprehensive analytics platform for fixed income portfolio management and analysis.",
-    tags: ["Next.js", "Analytics", "Finance", "Data Visualization"],
-    links: {
-      live: "https://fixed-income-portfolio-f3tc.vercel.app/",
-    },
-    featured: true,
-    image: "/images/fixed-income-portfolio.png",
-    category: "Finance & Capital Markets",
   },
   // Add more projects here as needed
 ];

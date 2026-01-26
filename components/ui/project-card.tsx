@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Github, FileText } from "lucide-react";
+import { ExternalLink, Github, FileText, BookOpen } from "lucide-react";
 import { Project } from "@/types/project";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
@@ -12,12 +12,14 @@ interface ProjectCardProps {
   project: Project;
   variant?: "large" | "small";
   className?: string;
+  onCaseStudyClick?: (projectId: string) => void;
 }
 
 export function ProjectCard({
   project,
   variant = "small",
   className,
+  onCaseStudyClick,
 }: ProjectCardProps) {
   const isLarge = variant === "large";
   const [imageError, setImageError] = useState(false);
@@ -106,6 +108,19 @@ export function ProjectCard({
 
           {/* Links */}
           <div className="flex flex-wrap gap-3 pt-2">
+            {project.hasCaseStudy && onCaseStudyClick && (
+              <button
+                onClick={() => onCaseStudyClick(project.id)}
+                className={cn(
+                  "inline-flex items-center gap-2 text-sm font-medium",
+                  "text-foreground hover:text-accent-foreground",
+                  "transition-colors"
+                )}
+              >
+                <BookOpen className="h-3.5 w-3.5" />
+                Case Study
+              </button>
+            )}
             {project.links.live && (
               <a
                 href={project.links.live}

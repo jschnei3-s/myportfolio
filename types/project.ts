@@ -12,5 +12,6 @@ export interface Project {
   featured: boolean;
   image: string;
   category?: string;
+  hasCaseStudy?: boolean;
 }
 
