@@ -40,15 +40,6 @@ export function ProjectCard({
           isLarge ? "h-full" : "h-full"
         )}
       >
-        {/* Featured Badge */}
-        {project.featured && (
-          <div className="absolute right-4 top-4 z-10">
-            <span className="rounded-full bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
-              Featured
-            </span>
-          </div>
-        )}
-
         {/* Image */}
         <div
           className={cn(

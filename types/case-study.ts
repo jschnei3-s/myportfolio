@@ -1,5 +1,6 @@
 export interface CaseStudy {
   projectId: string;
+  subtitle?: string;
   role: string;
   stack: string[];
   timeline: string;

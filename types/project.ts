@@ -1,3 +1,8 @@
+export type ProjectSection =
+  | "intelligence-systems"
+  | "quantitative-finance"
+  | "applied-ai";
+
 export interface Project {
   id: string;
   title: string;
@@ -13,5 +18,6 @@ export interface Project {
   image: string;
   category?: string;
   hasCaseStudy?: boolean;
+  section: ProjectSection;
 }
 

@@ -1,11 +1,24 @@
-import { Project } from "@/types/project";
+import { Project, ProjectSection } from "@/types/project";
 import { projects } from "@/data/projects";
+
+export const PROJECT_SECTIONS: { id: ProjectSection; title: string }[] = [
+  { id: "intelligence-systems", title: "Intelligence Systems" },
+  { id: "quantitative-finance", title: "Quantitative Finance & Modeling" },
+  { id: "applied-ai", title: "Applied AI Systems" },
+];
 
 /**
  * Get all featured projects
  */
 export function getFeaturedProjects(): Project[] {
   return projects.filter((project) => project.featured);
+}
+
+/**
+ * Get projects by section (for categorized display)
+ */
+export function getProjectsBySection(section: ProjectSection): Project[] {
+  return projects.filter((project) => project.section === section);
 }
 
 /**

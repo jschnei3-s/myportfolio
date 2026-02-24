@@ -1,20 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, FileText, Camera } from "lucide-react";
+import { ArrowRight, FileText, Camera, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-border">
+    <section className="relative overflow-hidden border-b border-border/50">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-muted/20" />
-      <div className="container relative mx-auto px-4 py-32 md:py-40">
+      <div className="container relative mx-auto px-4 py-28 md:py-36">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mx-auto max-w-4xl text-center"
+          className="mx-auto max-w-5xl text-center"
         >
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -41,8 +41,8 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-4"
           >
-            <p className="text-base text-muted-foreground sm:text-lg md:text-xl max-w-2xl mx-auto">
-              Applying machine learning and analytics powering real-world products
+            <p className="text-base text-muted-foreground sm:text-lg md:text-xl max-w-5xl mx-auto">
+              Applying machine learning and analytics to power real-world products.
             </p>
           </motion.div>
           <motion.div
@@ -54,24 +54,36 @@ export function Hero() {
             <a
               href="#projects"
               className={cn(
-                "group inline-flex items-center gap-2 rounded-lg bg-foreground px-8 py-4",
-                "text-base font-semibold text-background",
-                "transition-all hover:scale-105 hover:shadow-lg",
-                "focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                "group inline-flex items-center gap-2 rounded-lg bg-foreground px-6 py-3.5",
+                "text-sm font-semibold text-background",
+                "transition-all hover:opacity-90",
+                "focus:outline-none focus:ring-2 focus:ring-foreground/30 focus:ring-offset-2"
               )}
             >
               View Projects
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </a>
+            <Link
+              href="/thinking"
+              className={cn(
+                "group inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3.5",
+                "text-sm font-semibold bg-background",
+                "transition-all hover:border-foreground/40 hover:bg-muted/50",
+                "focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:ring-offset-2"
+              )}
+            >
+              <BookOpen className="h-4 w-4" />
+              How I Think
+            </Link>
             <a
               href="https://jsphotography629.squarespace.com/"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "group inline-flex items-center gap-2 rounded-lg border-2 border-border px-8 py-4",
-                "text-base font-semibold bg-background",
-                "transition-all hover:border-foreground hover:bg-muted/50",
-                "focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                "group inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3.5",
+                "text-sm font-semibold bg-background",
+                "transition-all hover:border-foreground/40 hover:bg-muted/50",
+                "focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:ring-offset-2"
               )}
             >
               <Camera className="h-4 w-4" />
@@ -82,10 +94,10 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "group inline-flex items-center gap-2 rounded-lg border-2 border-border px-8 py-4",
-                "text-base font-semibold bg-background",
-                "transition-all hover:border-foreground hover:bg-muted/50",
-                "focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                "group inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3.5",
+                "text-sm font-semibold bg-background",
+                "transition-all hover:border-foreground/40 hover:bg-muted/50",
+                "focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:ring-offset-2"
               )}
             >
               <FileText className="h-4 w-4" />

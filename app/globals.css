@@ -44,3 +44,8 @@ body {
   }
 }
 
+/* Consulting-grade: subtle section labels */
+.section-label {
+  @apply text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground;
+}
+

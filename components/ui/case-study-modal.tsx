@@ -63,9 +63,11 @@ export function CaseStudyModal({ caseStudy, isOpen, onClose }: CaseStudyModalPro
                   <div className="pr-8">
                     <p className="text-sm font-medium text-muted-foreground mb-2">Case Study</p>
                     <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-                    <p className="text-lg text-muted-foreground mb-6">
-                      Designing an AI-assisted system to practice structured thinking under ambiguity
-                    </p>
+                    {caseStudy.subtitle && (
+                      <p className="text-lg text-muted-foreground mb-6">
+                        {caseStudy.subtitle}
+                      </p>
+                    )}
                     
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                       <div>
