@@ -19,28 +19,31 @@ function FooterLink({ href, icon, label, external = false }: FooterLinkProps) {
     <LinkComponent
       {...linkProps}
       className={cn(
-        "flex items-center gap-2 text-muted-foreground hover:text-foreground",
-        "transition-colors duration-200"
+        "inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-sm text-muted-foreground",
+        "transition-colors hover:bg-muted/80 hover:text-foreground"
       )}
       aria-label={label}
     >
       {icon}
-      <span className="text-sm">{label}</span>
+      <span className="hidden sm:inline">{label}</span>
     </LinkComponent>
   );
 }
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background">
-      <div className="container mx-auto px-4 py-12">
-        <div className="flex flex-col items-center justify-center gap-6 md:flex-row md:justify-between">
+    <footer className="border-t border-border/50 bg-muted/20">
+      <div className="container mx-auto px-4 py-14">
+        <div className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
           <div className="text-center md:text-left">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Jonathan Schneider
+            <p className="text-sm font-semibold text-foreground">
+              Jonathan Schneider
+            </p>
+            <p className="mt-1 text-sm text-muted-foreground">
+              © {new Date().getFullYear()} · ML · Finance · Product
             </p>
           </div>
-          <nav className="flex flex-wrap items-center justify-center gap-6">
+          <nav className="flex flex-wrap items-center justify-center gap-1">
             <FooterLink
               href="https://www.linkedin.com/in/jonathanischneider/"
               icon={<Linkedin className="h-4 w-4" />}
@@ -82,4 +85,3 @@ export function Footer() {
     </footer>
   );
 }
-

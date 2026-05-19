@@ -21,21 +21,36 @@ const config: Config = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
+        },
+        ring: "hsl(var(--ring))",
+      },
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
       },
       fontSize: {
         "4xl": ["2.25rem", { lineHeight: "2.5rem", letterSpacing: "-0.02em" }],
         "5xl": ["3rem", { lineHeight: "1.2", letterSpacing: "-0.02em" }],
         "6xl": ["3.75rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        "7xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-0.02em" }],
+        "7xl": ["4.5rem", { lineHeight: "1", letterSpacing: "-0.03em" }],
       },
       spacing: {
         18: "4.5rem",
         88: "22rem",
         128: "32rem",
       },
+      boxShadow: {
+        glow: "0 0 60px -12px hsl(var(--primary) / 0.35)",
+        card: "0 4px 24px -4px hsl(var(--foreground) / 0.08)",
+        "card-hover":
+          "0 20px 40px -12px hsl(var(--foreground) / 0.12), 0 0 0 1px hsl(var(--primary) / 0.15)",
+      },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in-out",
         "fade-in-up": "fadeInUp 0.5s ease-out",
+        float: "float 8s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -46,6 +61,10 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(10px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
       },
     },
   },
@@ -53,4 +72,3 @@ const config: Config = {
 };
 
 export default config;
-

@@ -7,7 +7,7 @@ export const projects: Project[] = [
     description: "Upload financial data, run stress scenarios, analyze 10-K disclosures, and generate executive briefings—all in one workspace.",
     tags: ["Next.js", "AI/ML", "TypeScript", "Finance", "Vercel"],
     links: {
-      live: "https://aicap-mlab-8fqt8nhx6-yoni-schneiders-projects.vercel.app",
+      live: "https://aicap-mlab.vercel.app/login",
     },
     featured: true,
     image: "/images/capital-markets-ai-lab.png",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     description: "A realistic case interview partner that guides, evaluates, and teaches — anytime. Practice consulting case interviews with AI-powered feedback.",
     tags: ["Next.js", "AI/ML", "TypeScript", "Vercel"],
     links: {
-      live: "https://consulting-sim-uvup-32of1zors-yoni-schneiders-projects.vercel.app",
+      live: "https://consulting-sim-uvup.vercel.app/",
     },
     featured: true,
     image: "/images/consulting-case-simulator.jpg",

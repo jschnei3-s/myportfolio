@@ -51,19 +51,19 @@ const pillars: {
 export function ThinkingContent() {
   return (
     <article className="min-h-screen">
-      <div className="border-b border-border/50 bg-muted/10">
-        <div className="container mx-auto px-4 py-12 md:py-16">
+      <div className="relative border-b border-border/50 overflow-hidden">
+        <div className="absolute inset-0 bg-grid bg-grid-mask opacity-30 pointer-events-none" />
+        <div className="absolute inset-0 glow-orb pointer-events-none" />
+        <div className="container relative mx-auto px-4 py-14 md:py-20">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors mb-8"
+            className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors mb-8"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to portfolio
           </Link>
-          <p className="text-sm font-medium uppercase tracking-widest text-muted-foreground mb-3">
-            Perspective
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl max-w-3xl">
+          <p className="section-label mb-4">Perspective</p>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl max-w-3xl text-gradient">
             How I Think About Financial Systems
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-muted-foreground leading-relaxed">
@@ -85,8 +85,10 @@ export function ThinkingContent() {
             >
               <div className="flex gap-6 md:gap-10">
                 <div className="min-w-0 flex-1">
-                  <h2 className="text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-                    {String(index + 1).padStart(2, "0")} — {pillar.title}
+                  <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
+                    <span className="text-primary/60">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="text-muted-foreground/50 mx-2">—</span>
+                    {pillar.title}
                   </h2>
                   <p className="mt-5 text-lg font-medium text-foreground/95 leading-snug">
                     {pillar.lead}
@@ -102,7 +104,7 @@ export function ThinkingContent() {
                     ))}
                   </div>
                   {pillar.pullQuote && (
-                    <p className="mt-8 pt-6 border-t border-border/40 text-foreground/90 italic text-base leading-relaxed">
+                    <p className="mt-8 pt-6 border-l-2 border-primary/40 pl-5 text-foreground/90 italic text-base leading-relaxed">
                       {pillar.pullQuote}
                     </p>
                   )}
@@ -120,7 +122,7 @@ export function ThinkingContent() {
         >
           <Link
             href="/#projects"
-            className="inline-flex items-center gap-2 rounded-lg bg-foreground px-6 py-3 text-sm font-semibold text-background hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground shadow-glow hover:brightness-110 transition-all"
           >
             View projects
             <ArrowLeft className="h-4 w-4 rotate-180" />
